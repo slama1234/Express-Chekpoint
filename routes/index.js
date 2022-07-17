@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index');
 });
-/* GET services page. */
+
 
 router.use('/services/:d/:h', (req,res,next)=>{
   if(req.params.d<1||req.params.d>5){
@@ -20,7 +20,6 @@ router.get('/services/:d/:h',(req,res,next)=>{
   res.render('services')
 })
 
-/* GET contact page. */
 
 router.use('/contact/:d/:h', (req,res,next)=>{
   if(req.params.d<1||req.params.d>5){
